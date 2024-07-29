@@ -1,0 +1,551 @@
+<project name="joget-maven" basedir="." default="setup-maven">
+
+    <description>
+        Joget maven setup
+    </description>
+
+    <property name="name" value="joget"/>
+    <property name="title" value="joget"/>
+    <property name="vendor" value="Joget"/>
+    <property name="url" value="http://www.joget.org"/>
+
+    <target name="setup-maven" description="install JARs to local Maven repository">
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=com.microsoft"/>
+            <arg value="-DartifactId=sqljdbc"/>
+            <arg value="-Dversion=4.0"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sqljdbc-4.0.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=com.oracle"/>
+            <arg value="-DartifactId=ojdbc6"/>
+            <arg value="-Dversion=12.1.0.2"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=ojdbc6-12.1.0.2.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=javax.transaction"/>
+            <arg value="-DartifactId=jta"/>
+            <arg value="-Dversion=1.0.1B"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=jta-1.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=javax.resource"/>
+            <arg value="-DartifactId=connector-api"/>
+            <arg value="-Dversion=1.5"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=connector-api-1.5.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkadminapi"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkadminapi-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkappmappersistence-dods"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkappmappersistence-dods-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkappmappersistence-dodslayer"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkappmappersistence-dodslayer-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkassignment-historyrelated"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkassignment-historyrelated-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkassignment-standard"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkassignment-standard-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkassignment-xpdlstraightparticipantmapping"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkassignment-xpdlstraightparticipantmapping-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkcaching-lru"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkcaching-lru-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkcaching-simple"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkcaching-simple-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkclientapi"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkclientapi-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkclientutilities-misc"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkclientutilities-misc-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkcommonapi"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkcommonapi-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkcorbaclientapi"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkcorbaclientapi-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkeventaudit-dods"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkeventaudit-dods-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkeventaudit-dodslayer"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkeventaudit-dodslayer-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkeventaudit-notifying"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkeventaudit-notifying-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkeventaudit-smtp"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkeventaudit-smtp-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkinstancepersistence-dods"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkinstancepersistence-dods-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkinstancepersistence-dodslayer"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkinstancepersistence-dodslayer-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkinternalapi"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkinternalapi-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkinteroperability-wfxml"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkinteroperability-wfxml-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkkernel-standard"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkkernel-standard-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharklogging-eaf"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharklogging-eaf-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharklogging-standard"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharklogging-standard-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=shark-maven"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=shark-maven-2.0.1.jar"/>
+            <arg value="-DpomFile=shark-maven-2.0.1.pom"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkpartmappersistence-dods"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkpartmappersistence-dods-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkpartmappersistence-dodslayer"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkpartmappersistence-dodslayer-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkrepositorypersistence-dods"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkrepositorypersistence-dods-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkrepositorypersistence-dodslayer"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkrepositorypersistence-dodslayer-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkrepositorypersistence-filesystem"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkrepositorypersistence-filesystem-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkscripting-standard"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkscripting-standard-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharksecurity-standard"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharksecurity-standard-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharktoolagent-standard"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharktoolagent-standard-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkusergroup-dods"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkusergroup-dods-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkusergroup-dodslayer"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkusergroup-dodslayer-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkutilities-dods"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkutilities-dods-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkutilities-dodslayer"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkutilities-dodslayer-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkutilities-geronimo"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkutilities-geronimo-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkutilities-map"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkutilities-map-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkutilities-misc"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkutilities-misc-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkutilities-wmentity"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkutilities-wmentity-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkutilities-xpil"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkutilities-xpil-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkwebservice-asapapi"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkwebservice-asapapi-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=sharkwebservice-wfxmlapi"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=sharkwebservice-wfxmlapi-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=twexpdl"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=twexpdl-2.0.1.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=xapool"/>
+            <arg value="-Dversion=1.5.0"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=xapool-1.5.0.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=EnhydraShark"/>
+            <arg value="-DartifactId=tro-localcontext"/>
+            <arg value="-Dversion=2.0.1"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=tro-localcontext-7.1-1-professional.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=TogetherApplicationFramework"/>
+            <arg value="-DartifactId=eaf-api"/>
+            <arg value="-Dversion=7.1-1-community"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=eaf-api-7.1-1-community.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=TogetherApplicationFramework"/>
+            <arg value="-DartifactId=eafconfreader"/>
+            <arg value="-Dversion=7.1-1-community"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=eafconfreader-7.1-1-community.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=TogetherApplicationFramework"/>
+            <arg value="-DartifactId=eaflog4j"/>
+            <arg value="-Dversion=7.1-1-community"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=eaflog4j-7.1-1-community.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=TogetherApplicationFramework"/>
+            <arg value="-DartifactId=util"/>
+            <arg value="-Dversion=7.1-1-community"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=util-7.1-1-community.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=TogetherRelationalObjects"/>
+            <arg value="-DartifactId=dbmanager"/>
+            <arg value="-Dversion=7.1-1-professional"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=dbmanager-7.1-1-professional.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=TogetherRelationalObjects"/>
+            <arg value="-DartifactId=dsconnection"/>
+            <arg value="-Dversion=7.1-1-professional"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=dsconnection-7.1-1-professional.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=TogetherRelationalObjects"/>
+            <arg value="-DartifactId=stdcaches"/>
+            <arg value="-Dversion=7.1-1-professional"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=stdcaches-7.1-1-professional.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=TogetherRelationalObjects"/>
+            <arg value="-DartifactId=stdconnection"/>
+            <arg value="-Dversion=7.1-1-professional"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=stdconnection-7.1-1-professional.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=TogetherRelationalObjects"/>
+            <arg value="-DartifactId=stdtransaction"/>
+            <arg value="-Dversion=7.1-1-professional"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=stdtransaction-7.1-1-professional.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=TogetherRelationalObjects"/>
+            <arg value="-DartifactId=tro-jta"/>
+            <arg value="-Dversion=7.1-1-professional"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=tro-jta-7.1-1-professional.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=TogetherRelationalObjects"/>
+            <arg value="-DartifactId=tro-localcontext"/>
+            <arg value="-Dversion=7.1-1-professional"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=tro-localcontext-7.1-1-professional.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=com.lowagie"/>
+            <arg value="-DartifactId=itext-asian"/>
+            <arg value="-Dversion=2.0.8"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=itext-asian-2.0.8.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=officelnfs"/>
+            <arg value="-DartifactId=officelnfs"/>
+            <arg value="-Dversion=2.7"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=officelnfs-2.7.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=jgraph"/>
+            <arg value="-DartifactId=jgraph"/>
+            <arg value="-Dversion=5.10.2.0"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=jgraph-5.10.2.0.jar"/>
+        </exec>
+	<exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=com.sun.java.jnlp"/>
+            <arg value="-DartifactId=jnlp-servlet"/>
+            <arg value="-Dversion=5.0"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=jnlp-servlet-5.0.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=net.sf"/>
+            <arg value="-DartifactId=jedit-syntax"/>
+            <arg value="-Dversion=2.2.2"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=jedit-syntax-2.2.2.jar"/>
+        </exec>
+        <exec executable="mvn.cmd">
+            <arg value="install:install-file"/>
+            <arg value="-DgroupId=org.xhtmlrenderer"/>
+            <arg value="-DartifactId=core-renderer"/>
+            <arg value="-Dversion=R8-final"/>
+            <arg value="-Dpackaging=jar"/>
+            <arg value="-Dfile=core-renderer-R8-final.jar"/>
+        </exec>
+    </target>
+</project>
